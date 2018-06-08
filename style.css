@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background: url(./clock-with-minute-ticks-no-hands-hi.png);
+  background-size: 100%;
+
+}
+
+
+
+
+.hands {
+  position: absolute;
+  top: 55px;
+  left: 61px;
+}
