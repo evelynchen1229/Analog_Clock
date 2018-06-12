@@ -2,7 +2,7 @@ const secondHand = document.getElementById('secondHand');
 const minutedHand = document.getElementById('minuteHand');
 const hourHand = document.getElementById('hourHand');
 
-clock() => {
+function tick() {
   /*to  get the current time */
   const date = new Date();
   const second = date.getSeconds();
@@ -25,12 +25,12 @@ slightly towards the next minute, namely, within 60 seconds, the hand will rotat
   const hourDeg = (hour * 30) + (minute * 0.5); /*(360 degree / 12 hours) + (30 degree / 60 minutes)*/
 
   /*then put the degree in the style.transform */
-  secondHand.style.transform = "rotate (" + secondDeg + ") degree";
-  minutedHand.style.transform = "rotate (" + minuteDeg + ") degree";
-  hourHand.style.transform = "rotate (" + hourdDeg + ") degree";
+  secondHand.style.transform = "rotate (" + secondDeg + "deg)";
+  minutedHand.style.transform = "rotate (" + minuteDeg + "deg)";
+  hourHand.style.transform = "rotate (" + hourdDeg + "deg)";
 
   /*the time will be updated every second*/
-  setTimeout(clock, 1000)
+  setTimeout(tick, 1000)
 }
 
-clock();
+tick();
